@@ -1,0 +1,265 @@
+#item-info {
+    background: $bkg-second-color;
+    .item-info-container{
+        display: flex;
+        justify-content: center;
+        .all-product-button-mobile {
+            display: none;
+        }
+            img {
+                max-width: 100%;
+                max-height: 100%;
+              }
+        .about-item-section {
+            max-width: 37.5%;
+            padding:22px 72px 49px 72px;
+            .all-product-button-desktop {
+                position: relative;
+                font-size: 11px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 159.1%; 
+                letter-spacing: 0.55px;
+            }
+            .all-product-button-desktop::before {
+                content: "";
+                position: absolute;
+                z-index: 900;
+                left: -25px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 14px; 
+                height: 9px;
+                background: url('../../img/main/arrow.svg') no-repeat center;
+            }
+            .about-item {
+                .main-title {
+                    margin-top: 58px;
+                }
+                .main-subtitle {
+                    margin-top: 3px;
+                    font-size: 14px;
+                }
+                .horizontal-line {
+                    margin-top: 20px;
+                }
+                p {
+                    margin-top: 21px;
+                }
+            }
+            .organic-proof{
+                margin-top: 27px;
+                .grid-container {
+                    display: grid;
+                    grid-template-rows: 1fr 1fr; 
+                    grid-template-columns: 1fr 1fr; 
+                    gap: 25px; 
+                    margin: 0 auto; 
+                    .grid-item {
+                        color: $secont-color;
+                        display: flex;
+                        position: relative;
+                        text-align: center; 
+                       .proof-icon{
+                        font-size: 14px;
+                        font-weight: 500;
+                        width: 52px; 
+                        height: 52px;
+                        background: url('../../img/main/cercle.svg') no-repeat center;
+                        }
+                        .proof-icon::before{
+                            content: "";
+                            position: absolute;
+                            z-index: 900;
+                            transform: translateY(-50%);
+                            transform: translateX(-50%);
+                            width: 52px; 
+                            height: 52px;
+                            background: url('../../img/main/blood_test.svg') no-repeat center;
+                        }
+                        span{
+                            margin:auto;
+                        }
+                    }
+                }
+            }
+            .horizontal-line {
+                margin-top: 35px;
+            }
+            .add-to-card-section{
+                #offer-selection{
+                    margin-top: 30px;
+                    .input-container{
+                        display: flex;
+                        color: $cercle-color;
+                        .input-box{
+                            position: relative;
+                            width: 22px;
+                            height: 22px;
+                            input[type=checkbox] {
+                                width: 1px;
+                                height: 1px;
+                                top: 0;
+                                left: 0;
+                                border: none;
+                                border-radius: 50%;
+                                background-color: $bkg-second-color;
+                            }
+                            input[type=checkbox]:before {
+                                content: "";
+                                display: block;
+                                position: absolute;
+                                width: 22px;
+                                height: 22px;
+                                top: 0;
+                                left: 0;
+                                border: 1px solid $cercle-color;
+                                border-radius: 50%;
+                                background-color: transparent   ;
+                            }
+                            input[type=checkbox]:checked:after {
+                                content: "";
+                                position: absolute;
+                                top: 3px;
+                                left: 3px;
+                                display: block;
+                                width: 16px;
+                                height: 16px;
+                                border: 1px solid $cercle-color;
+                                border-radius: 50%;
+                                background-color: $cercle-color;
+                            }
+                            
+                        }
+                        label {
+                            margin-left: 18px;
+                        }
+                    }
+                    .ch2 {
+                        margin-top: 28px;
+                    }
+                }
+                #quantity-and-add{
+                    display: flex;
+                    margin-top: 54px;
+                    #quantity-counter{
+                        display: flex;
+                        padding-left: 14px;
+                        padding-right: 11px;
+                        justify-content: space-between;
+                        align-items: center;
+                        border: 1px solid $main-color;
+                        width: 111px;
+                        height: 47px;
+                        gap: 30px;
+                    }
+                    .add-to-card-button{
+                        text-transform: uppercase;
+                        height: 47px;
+                        width: 100%;
+                        margin-left: 16px;
+                        background-color: $button-color;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1200px) {
+    #item-info{
+        .item-info-container{
+            display: block;
+            img{
+                margin: auto;
+            }
+            .about-item-section{
+                max-width: 70%;
+            }
+        }
+    }
+}
+@media (max-width: 414px) {
+    #item-info{
+        .item-info-container{
+            .all-product-button-mobile{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                position: relative;
+                display: block;
+                margin-left: 52px;
+                color: $main-color;
+                font-size: 10px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 159.1%;
+                letter-spacing: 0.5px;
+                span{
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 159.1%; /* 15.91px */
+                    letter-spacing: 0.5px;
+                }
+            }
+            .all-product-button-mobile::before{
+                content: "";
+                position: absolute;
+                z-index: 900;
+                left: -25px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 14px; 
+                height: 9px;
+                background: url('../../img/main/arrow.svg') no-repeat center;
+            }
+            .product-img-section-mobile{
+                display: flex;
+                justify-content: center;
+                margin: auto;
+                max-width: 100%;
+                max-height: 100%;
+            }
+            .about-item-section{
+                padding: 32px 20px 42px 26px;
+                display: block;
+                max-width: none;
+                .all-product-button-desktop{
+                    display: none;
+                }
+                .about-item {
+                    .main-title{
+                        margin: 0;
+                    }
+                    .main-subtitle {
+                        margin-top: 16px;
+                    }
+                    .horizontal-line {
+                        margin-top: 24px;
+                    }
+                    p {
+                        margin-top: 18px;
+                    }
+                }
+                .add-to-card-section{
+                    #offer-selection{
+                        margin-top: 41px;
+                        label{
+                            font-weight: 300;
+                            line-height: 159.1%; /* 25.456px */
+                            letter-spacing: 0.8px;
+                        }
+                        .ch2 {
+                            margin-top: 22px;
+                        }
+                    }
+                    #quantity-and-add{
+                        margin-top: 47px;
+                        .add-to-card-button{
+                            margin-left: 19px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

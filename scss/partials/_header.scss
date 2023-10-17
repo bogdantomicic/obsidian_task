@@ -1,0 +1,112 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    background-color: $bkg-color;
+    padding:10px 75px 0px 60px;
+    .navbar-toggle {
+        display: none;
+    }
+    .nav{
+      display: flex; 
+      gap: 30px;
+      padding: 0;
+      font-size: 14px;
+    }
+ 
+    .right-section{
+        display: flex;   
+        gap: 18px;
+        img{
+            width: 24px;
+            height: 24px;  
+        }
+        .card {
+            transform: scale(1); /* Initial zoom factor */
+            transition: transform 0.3s; 
+        }
+        .card.zoomed {
+            transition-delay: 1500ms;
+            transform: scale(1.1);
+            animation: rotateAnimation 1.2s ease-in-out 1;
+            animation-delay: 100ms;
+        }
+        .card.zoomed::after{
+            content: "";
+            transition: 0.4s;
+            position: absolute;
+            transform: translate(23px, -100px);
+            display: block;
+            width: 20px;
+            height: 20px;
+            background: url('../../img/header/one.png') no-repeat center;
+            animation: counterAppear 1s ease-in-out 1;
+            animation-delay: 1000ms;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+@media (max-width: 414px) {
+    .main-header{
+        padding: 0 21px 0px 28px;
+        .navbar-toggle {
+            display: block;
+        }
+    }
+    .middle-section{
+        display: none;
+    }
+    .right-section{
+        form {
+            display: flex;
+            position: absolute;
+            left: 76px;
+        }
+    }
+}
+@media (max-width: 700px) {
+    .main-header{
+        padding: 0 21px 0px 28px;
+        .navbar-toggle {
+            display: block;
+        }
+    }
+    .middle-section{
+        display: none;
+    }
+    .right-section{
+        form {
+            display: flex;
+            position: absolute;
+            left: 76px;
+        }
+    }
+}
+
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    33% {
+        transform: rotate(-25deg);
+    }
+    66% {
+        transform: rotate(33deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes counterAppear {
+    0% {
+            transform: translate(23px, -100px);
+    }
+    100% {
+        transform: translate(23px, -29px);
+    }
+}
+

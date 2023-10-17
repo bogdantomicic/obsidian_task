@@ -1,0 +1,51 @@
+#ingredients{
+    max-width: 46.52%;
+    margin-left: 137px;
+    .subtitle-toggle{
+        cursor: pointer;
+        margin-top: 32px;
+        display: flex;
+        justify-content: space-between;
+        .subtitle {
+            text-transform: none;
+        }
+        p{
+            font-size: 27px;
+        }
+    }
+    .p-container{
+        display: block;
+        margin-top: 31px;
+        opacity: 0;
+        animation: fadeInOut 0.7s forwards; /* Dodajte CSS animaciju */
+    }
+    .p-container.hidden {
+        opacity: 0;
+    }
+    .p-container:not(.hidden) {
+        display: none;
+        opacity: 1;
+    }
+    .horizontal-line{
+        margin-top: 32px;
+    }
+}
+@media (max-width: 414px) {
+        #ingredients{
+            max-width: none;
+            margin-left: 26px;
+            margin-right: 21px;
+            .p-container{
+                margin-top: 16px;
+            }
+        }
+}
+
+@keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
