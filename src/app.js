@@ -1,22 +1,25 @@
 // item checked START
 
-function changeLabelColor(checkbox) {
-    var label = document.getElementById('label1');
-    if (checkbox.checked) {
-      label.style.color = '#4D4D4D'; 
-    } else {
-      label.style.color = ''; 
+function toggleCheckbox(checkbox) {
+  const labelId = checkbox.getAttribute("data-label-id");
+  var label = document.getElementById(labelId);
+  if (checkbox.checked) {
+    label.style.color = '#4D4D4D'; 
+    if (labelId === "label2") {
+      const label1Checkbox = document.querySelector('input[data-label-id="label1"]');
+      label1Checkbox.checked = false;
+      const label1 = document.getElementById("label1");
+      label1.style.color = '';  
+    } else if (labelId === "label1") {
+      const label2Checkbox = document.querySelector('input[data-label-id="label2"]');
+      label2Checkbox.checked = false;
+      const label2 = document.getElementById("label2");
+      label2.style.color = '';  
     }
+  } else {
+    label.style.color = ''; 
   }
-
-  function changeLabelColor2(checkbox) {
-    var label = document.getElementById('label2');
-    if (checkbox.checked) {
-      label.style.color = '#4D4D4D'; 
-    } else {
-      label.style.color = '';
-    }
-  }
+}
 
 // item checked START
 

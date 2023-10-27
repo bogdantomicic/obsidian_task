@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Find the best hair mask products for hair care in our online shop. Our offer includes a wide range of products for all hair types.">
     <title>Sale of Hair Mask Products - Your Best Destination for Hair Care</title>
-    <link rel="stylesheet" href="../scss/partials/min.css">
+    <link rel="stylesheet" href="../scss/main.css">
   </head>
   <body>
     <!-- HEADER START -->
@@ -63,14 +63,16 @@
       <!-- INFO ITEM START -->
       <section id="item-info">
         <div class="item-info-container">
-          <button class="all-product-button-mobile">
-            <span>ALL PRODUCTS / HAIRCARE / </span>RESTORATIVE HAIR MASK
-          </button>
+          <div class="image-container">
           <img src="../img/main/product_image.png" alt="restorative hair mask">
-          <div class="about-item-section">
-            <button class="all-product-button-desktop">
+          </div>
+          <div class="about-item-section content-container">
+            <div class="product-description">
+            <button style="display: block !important;" class="all-product-button-desktop">
               ALL PRODUCTS / HAIRCARE / RESTORATIVE HAIR MASK
             </button>
+            </div>
+            <div class="product-description">
             <div class="about-item">
               <h2 class="main-title title">RESTORATIVE HAIR MASK</h2>
               <h3 class="main-subtitle subtitle">nuturishment in a bottle</h3>
@@ -99,13 +101,13 @@
                 <div id="offer-selection">
                   <div class="input-container">
                     <div class="input-box">
-                      <input type="checkbox" name="offer1" value="Buy Once 38$" onchange=changeLabelColor(this)>
+                      <input data-label-id="label1" type="checkbox" name="offer1" value="Buy Once 38$" onchange=toggleCheckbox(this)>
                     </div>
                     <label id="label1" for="offer1">Buy Once | $38</label><br>
                   </div>
                   <div class="input-container ch2">
                     <div class="input-box">
-                      <input type="checkbox" name="offer2" value="Subscribe" onchange=changeLabelColor2(this)>
+                      <input data-label-id="label2" type="checkbox" name="offer2" value="Subscribe" onchange=toggleCheckbox(this)>
                     </div>
                     <label id="label2" for="offer2">Subscribe (SAVE 20%) | $30</label><br>
                   </div>
@@ -120,12 +122,21 @@
                   <button class="add-to-card-button">Add to Card</button>
                 </div>
               </div>
+            </div>
           </div>
         </div>
       </section>
       <!-- INFO ITEM END -->
 
       <!-- INGREDIENTS START -->
+
+      <!-- <section>
+        <ul class="ingredients">
+            <li><h2>Ingredients</h2></li>
+            <li><h2>Ingredients</h2></li>
+        </ul>
+      </section> -->
+
       <section>
         <div id="ingredients">
           <div class="subtitle-toggle">
@@ -156,6 +167,23 @@
       <!-- INGREDIENTS END -->
 
       <!-- PRODUCTS START -->
+
+      <!-- <section>
+        <h2>YOU MAY ALSO LIKE</h2>
+        <div class="products">
+            <article class="product">
+                <img src="product1.jpg" alt="Product 1">
+                <h3>Product 1</h3>
+                <p>Product 1 description</p>
+            </article>
+            <article class="product">
+                <img src="product2.jpg" alt="Product 2">
+                <h3>Product 2</h3>
+                <p>Product 2 description</p>
+            </article>
+        </div>
+      </section> -->
+
       <section>
         <article>
           <div id="products">
